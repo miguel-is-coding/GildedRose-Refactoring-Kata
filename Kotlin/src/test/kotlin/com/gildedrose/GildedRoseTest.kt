@@ -1,5 +1,6 @@
 package com.gildedrose
 
+import org.approvaltests.Approvals
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
@@ -12,6 +13,11 @@ internal class GildedRoseTest {
         app.updateQuality()
         assertEquals("fixme", app.items[0].name)
 
+    }
+
+    @Test
+    fun testWithApprovalTests() {
+        Approvals.verify("Hello World!")
     }
 
 }
